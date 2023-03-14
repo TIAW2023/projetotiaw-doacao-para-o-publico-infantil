@@ -1,6 +1,6 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=10491409&assignment_repo_type=AssignmentRepo)
 # Doação para o Público Infantil
-Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
+O principal objetivo do nosso projeto é facilitar a procura de pessoas, instituições ou ONGs que desejam receber doações de roupas , calçados e/ou brinquedos infantil.
 
 ## Alunos integrantes da equipe
 
