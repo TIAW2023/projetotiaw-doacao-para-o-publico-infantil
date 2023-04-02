@@ -15,7 +15,7 @@ O principal objetivo do nosso projeto é facilitar a procura de pessoas, institu
 ## Professores responsáveis
 
 * Caroline Rhaian da Silva Jandre.
-* Nome completo do professor 2
+
 
 ## Quadro de tarefas
 Coloque aqui o link para acesso do Kanban do projeto, seja ele no GitHub ou em outra plataforma.
