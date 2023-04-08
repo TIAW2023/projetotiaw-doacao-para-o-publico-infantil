@@ -6,11 +6,11 @@ O principal objetivo do nosso projeto é facilitar a procura de pessoas, institu
 ## Alunos integrantes da equipe
 
 * Armintas Fernandes da Silva Filho.
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 4
-* Nome completo do aluno 4
+* Arthur Trindade.
+* Jõao Lucas.
+* Marcos Paulo.
+* Matheus Roberto Almeida Sacramento.
+
 
 ## Professores responsáveis
 
@@ -18,7 +18,7 @@ O principal objetivo do nosso projeto é facilitar a procura de pessoas, institu
 
 
 ## Quadro de tarefas
-Coloque aqui o link para acesso do Kanban do projeto, seja ele no GitHub ou em outra plataforma.
+https://trello.com/w/doacaoparaopublicoinfantil/home
 
 ## Instruções para uso
 Coloque aqui as instruções para acessar a página inicial do projeto (caminho completo do arquivo).
