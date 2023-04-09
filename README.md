@@ -21,4 +21,4 @@ Temos como nosso objetivo fazer a ligação de pessoas que querem doar com os me
 https://trello.com/w/doacaoparaopublicoinfantil/home
 
 ## Instruções para uso
-Coloque aqui as instruções para acessar a página inicial do projeto (caminho completo do arquivo).
+Coloque aqui as instruções para acessar a página inicial do projeto (caminho completo do arquivo
