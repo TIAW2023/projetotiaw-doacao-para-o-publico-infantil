@@ -18,7 +18,7 @@ Temos como nosso objetivo fazer a ligação de pessoas que querem doar com os me
 
 
 ## Quadro de tarefas
-https://trello.com/w/doacaoparaopublicoinfantil/home
+https://trello.com/b/wrN9ZYIs/quadro-de-kanban
 
 ## Instruções para uso
 Coloque aqui as instruções para acessar a página inicial do projeto (caminho completo do arquivo
