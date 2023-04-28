@@ -27,11 +27,13 @@ Analise e Desenvolvimento de Sistemas.
   - [Público-Alvo](#público-alvo)
 - [Especificações do Projeto](#especificações-do-projeto)
   - [Personas](#personas)
-  - [Histórias de Usuários](#histórias-de-usuários)
   - [Requisitos](#requisitos)
-- [Projeto da Solução](#projeto-da-solução)
+- [Metodologia](#metodologia)
+  - [Relação de Ambientes de Trabalho](#relação-de-ambientes-de-trabalho)
+  - [Gerenciamento da Equipe](#gerenciamento-da-equipe )
+- [Projeto de Interface](#projeto-de-interface)
   - [Wireframes](#wireframes)
-  - [Mapa de navegação](#mapa-de-navegação)
+  - [Fluxo de Usuário](#fluxo-de-usuário)
 - [Conclusões](#conclusões)
   
 # Introdução
@@ -97,50 +99,15 @@ O foco deste trabalho está em todas as pessoas, como:
 
 # Especificações do Projeto
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Apresente uma visão geral do que será abordado nesta parte do
-> documento, enumerando as técnicas e/ou ferramentas utilizadas para
-> realizar a especificações do projeto
-
 ## Personas
+**1° Persona**
+![Persona1](images/Persona1.jpg)
 
-......  COLOQUE AQUI O SEU TEXTO ......
+**2° Persona**
+![Persona2](images/Persona2.jpg)
 
-> Relacione as personas identificadas no seu projeto. Lembre-se que 
-> você deve descrever precisamente e de forma personalizada o público alvo do seu projeto. 
-> Você pode incluir uma imagem da ficha de persona desenvolvida. 
->
-> Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina
-> e/ou nos seguintes links:
->
-> **Links Úteis**:
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> 
-> **Exemplo de Ficha**
-> ![Exemplo de Persona](images/persona.png)
- 
-
-## Histórias de Usuários
-
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
-
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-> Seguindo o modelo acima, apresente aqui as histórias de usuário que são relevantes para o
-> projeto de sua solução. As Histórias de Usuário consistem em uma
-> ferramenta poderosa para a compreensão e elicitação dos requisitos
-> da sua aplicação. Utilize as personas criadas como atores e, se for o caso, um administrador. 
->
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
+**3° Persona**
+![Persona3](images/Persona3.jpg)
 
 ## Requisitos
 
@@ -169,6 +136,41 @@ As tabelas a seguir apresentam os requisitos funcionais, não funcionais e as re
 |------|-----------------------------------------|
 |RES-001| A equipe não pode terceirizar o desenvolvimento do projeto. | 
 |RES-002| O projeto deve ser entregue até o final do semestre letivo. |
+
+# Metodologia
+## Relação de Ambientes de Trabalho 
+|  Ambiente   | Plataforma  | Link de Acesso |
+|-------------|-------|----------------|
+| Documentação| GitHub | https://github.com/TIAW2023/projetotiaw-doacao-para-o-publico-infantil/blob/master/docs/relatorio/Relatorio%20Tecnico%20-%20TEMPLATE.md | 
+|Repositório de código fonte| GitHub |link |
+|Projeto de interface & Wireframes| GitHub | link |
+Gerenciamento do Projeto| Trello |https://trello.com/b/wrN9ZYIs/quadro-de-kanban|
+
+## Gerenciamento da Equipe 
+A equipe utiliza o Scrum como base para definição do processo de desenvolvimento.
+
+A equipe está organizada da seguinte forma:
+
+- Scrum Master: Armintas Fernandes.
+- Product Owner: Arthur Trindade.
+- Equipe de Desenvolvimento:
+  - Marcos Paulo (Desenvolvedor Full-Stack)
+  - João Lucas (Desenvolvedor Full-Stack)
+  - Matheus Roberto (Desenvolvedor Full-Stack)
+ 
+Para organização e distribuição das tarefas do projeto, a equipe está utilizando
+o Trello estruturado com as seguintes listas:
+
+- **Backlog:** o backlog é uma lista de itens pendentes ou não concluídos que
+precisam ser trabalhados, seja em desenvolvimento de software,
+atendimento ao cliente, gestão de projetos ou em outros contextos
+similares. É uma ferramenta de gerenciamento usada para priorizar e
+acompanhar o progresso das tarefas pendentes.
+- **A fazer:** Esta lista representa o Sprint Backlog. Este é o Sprint atual que
+estamos trabalhando.
+- **Em andamento:** Quando uma tarefa tiver sido iniciada, ela é movida para
+cá.
+- **Concluído:** Nesta lista são colocadas as tarefas já concluídas.
 
 
 # Projeto da Solução
