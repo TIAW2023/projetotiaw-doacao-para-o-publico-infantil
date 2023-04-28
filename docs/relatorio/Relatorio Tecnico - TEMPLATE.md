@@ -172,13 +172,11 @@ estamos trabalhando.
 cá.
 - **Concluído:** Nesta lista são colocadas as tarefas já concluídas.
 
-### Quadro de Kanban
+### Quadro de Kanban - Trello
 ![Quadro-de-Kanban](images/quadrokanban.png)
 
-# Projeto da Solução
-
-......  COLOQUE AQUI O SEU TEXTO ......
-> Descreva brevemente quais tecnologias e/ou frameworks foram utilizados no projeto.
+# Projeto de Interface
+Para fazer os wireframes e o fluxo de usuário nosso grupo optou por utilizar o site **mockflow.com**
 
 ## Wireframes
 
