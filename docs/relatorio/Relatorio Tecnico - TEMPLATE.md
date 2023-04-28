@@ -1,21 +1,19 @@
 # Informações do Projeto
 `TÍTULO DO PROJETO`  
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Doação para o público infantil. 
 
 `CURSO` 
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Analise e Desenvolvimento de Sistemas.
 
 ## Participantes
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Inclua a lista dos membros da equipe com seus nomes completos.
->
-> Os membros do grupo são: 
-> - Fulano da Silva
-> - Ciclano Albuquerque
+- Armintas Fernandes da Silva Filho.
+- Arthur Trindade.
+- João Lucas.
+- Marcos Paulo.
+- Matheus Roberto Almeida Sacramento. 
 
 # Estrutura do Documento
 
@@ -25,6 +23,7 @@
 - [Introdução](#introdução)
   - [Problema](#problema)
   - [Objetivos](#objetivos)
+  - [Justificativa](#justificativa)
   - [Público-Alvo](#público-alvo)
 - [Especificações do Projeto](#especificações-do-projeto)
   - [Personas](#personas)
@@ -33,54 +32,69 @@
 - [Projeto da Solução](#projeto-da-solução)
   - [Wireframes](#wireframes)
   - [Mapa de navegação](#mapa-de-navegação)
-- [Conclusões](#avaliação-da-aplicação)
+- [Conclusões](#conclusões)
   
 # Introdução
+A cada dia que passa a desigualdade social vem crescendo no mundo e
+infelizmente não são todas as pessoas que têm condições financeiras para viver no
+“luxo”. E o fato de ter um filho, aumenta ainda mais os gastos no final do mês.
 
+Consoante a isso, a doação infantil se torna crucial, pois ela fornece assistência
+financeira a uma criança carente. As doações normalmente vão para educação,
+saúde, nutrição e entre outras necessidades básicas.
+
+No geral, os programas de doação ao público infantil podem ser uma maneira
+poderosa de fazer a diferença no mundo e ajudar a melhorar a vida de crianças que
+enfrentam desafios significativos.
 ## Problema
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Muitas famílias hoje sofrem com problemas, como: 
+- O desemprego.
+- Saúde.
+- Desigualdade social. 
+- Educação, violência. 
+- Exclusão social 
+- O acesso a moradia com as devidas condições de infraestrutura. 
 
-> Nesse momento você deve apresentar o problema que a sua aplicação deve
-> resolver. No entanto, não é a hora de comentar sobre a aplicação.
-> Descreva também o contexto em que essa aplicação será usada, se
-> houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de
-> fato existir, pois ainda não é a hora de apresentar requisitos
-> detalhados ou projetos. Utilize como base a ficha inicial de detalhamento do problema.
->
+Esses problemas acabam dificultando várias famílias de terem condições
+suficientes para criarem seus filhos e ficam dependente de muita ajuda social através
+de doações de roupas, alimentos, entre outros.
+
+Conforme o exposto, o problema que se busca resolver com esse projeto é de
+ajudar as pessoas necessitadas, principalmente famílias com crianças.
 
 ## Objetivos
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Nosso objetivo é fazer a ligação de pessoas que querem doar com os
+meios de doação, como:
+- Ongs. 
+- Escolas infantis. 
+- Creches. 
+- Entre outros espaços. 
 
-> Aqui você deve descrever os objetivos do trabalho indicando que o
-> objetivo geral é desenvolver um software para solucionar o problema
-> apresentado acima. Apresente também pelo menos 2 objetivos
-> específicos dependendo de onde você vai querer concentrar ou aprofundar
-> as características do trabalho.
-> 
-> **Link Útil**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Por meio da ultilização do nosso site, facilitando assim, a comunicação entre os doadores e os que precisam de doações com a principal finalidade de ajudar uma criança carente.
+
+## Justificativa
+"No brasil, ao menos 32 milhões de meninos e meninas (63% do total) vivem na
+pobreza, nas suas múltiplas dimensões. renda, educação, trabalho infantil, moradia,
+água, saneamento e informação."
+É o que indica a pesquisa “as múltiplas dimensões da pobreza na infância e na adolescência no brasil”. O estudo apresenta dados até 2019 (trabalho infantil), até 2020 (moradia, água, saneamento e informação), até 2021(renda, incluindo renda pra alimentação) e dados até 2022 (educação).
+
+Assim concluindo-se a importância sobre o trabalho de ongs e pessoas
+independentes, pelas quais se unem com um único objetivo, que é arrecadar fundos e
+doações para o mesmo público citado acima, assim fomentando o surgimento de
+vários sites para facilitar os meios de doações que as pessoas desejam fazer. Visto
+que a situação atual no país é alarmante, com grandes números que só tendem a
+crescer mais e mais com o passar dos anos.
 
 ## Público-Alvo
+O foco deste trabalho está em todas as pessoas, como: 
+- Pais. 
+- Responsáveis.
+- Educadores que tem como intuito ajudar o próximo e contribuir para causas sociais.
+- Projetos que fazem movimentos frequentes de reunir materiais, roupas e comida para ongs e orfanatos.
 
-......  COLOQUE AQUI O SEU TEXTO ......
 
-> Descreva quem serão as pessoas que usarão a sua aplicação indicando os
-> diferentes perfis. O objetivo aqui não é definir quem serão os
-> clientes ou quais serão os papéis dos usuários na aplicação. A ideia
-> é, dentro do possível, conhecer um pouco mais sobre o perfil dos
-> usuários: conhecimentos prévios, relação com a tecnologia, relações
-> hierárquicas, etc.
->
-> Adicione informações sobre o público-alvo por meio de uma descrição
-> textual, ou diagramas de personas, mapa de stakeholders, ou como o
-> grupo achar mais conveniente.
-> 
-> **Links Úteis**:
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
- 
 # Especificações do Projeto
 
 ......  COLOQUE AQUI O SEU TEXTO ......
@@ -130,22 +144,32 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 ## Requisitos
 
-A tabela que segue apresenta os requisitos funcionais do projeto. 
+As tabelas a seguir apresentam os requisitos funcionais, não funcionais e as restrições do projeto. 
 
 ### Requisitos Funcionais
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| O site deve ter um filtro de pesquisa onde possa selecionar  palavras-chaves do que procura.  | MÉDIA | 
+|RF-002| O site deve ter informações completas sobre os usuários.  | ALTA |
+|RF-003| O site deve ter uma tela de login.  | ALTA |
+|RF-004| O site deve fornecer uma maneira de a organização de doação infantil se comunicar com os doadores. | ALTA |
 
+### Requisitos não funcionais
+|ID    | Descrição do Requisito  | Prioridade |
+|------|-----------------------------------------|----|
+|RNF-001| O site deve ter um ótimo desempenho. | MÉDIA | 
+|RNF-002| O site deve ser responsivo e adequar-se para diferentes tamanhos de tela. | ALTA |
+|RNF-003| O site deve ser fácil de ser usado e intuitivo.  | ALTA |
+|RNF-004| O site deve ser compatível com o Google Chrome. | ALTA |
+|RNF-005| O site deve ter medidas de segurança para proteger as informações dos doadores. | ALTA |
 
-> Com base nas Histórias de Usuário, enumere os requisitos da sua
-> solução. Classifique esses requisitos em dois grupos:
->
-> Lembre-se que cada requisito deve corresponder à uma e somente uma
-> característica alvo da sua solução. Além disso, certifique-se de que
-> todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+### Restrições
+|ID    | Descrição da Restrição |
+|------|-----------------------------------------|
+|RES-001| A equipe não pode terceirizar o desenvolvimento do projeto. | 
+|RES-002| O projeto deve ser entregue até o final do semestre letivo. |
+
 
 # Projeto da Solução
 
