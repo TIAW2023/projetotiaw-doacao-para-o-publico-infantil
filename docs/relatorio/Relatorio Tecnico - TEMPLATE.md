@@ -96,8 +96,8 @@ O foco deste trabalho está em todas as pessoas, como:
 - Educadores que tem como intuito ajudar o próximo e contribuir para causas sociais.
 - Projetos que fazem movimentos frequentes de reunir materiais, roupas e comida para ongs e orfanatos.
 
-
 # Especificações do Projeto
+Nesta parte da documentação criamos 3 personas que representarão os possíveis usuários que utilizarão o nosso site. Juntamente com a criação das personas fizemos os requisitos do nosso site.  
 
 ## Personas
 **1° Persona**
@@ -115,36 +115,38 @@ As tabelas a seguir apresentam os requisitos funcionais, não funcionais e as re
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| O site deve ter um filtro de pesquisa onde possa selecionar  palavras-chaves do que procura.  | MÉDIA | 
-|RF-002| O site deve ter informações completas sobre os usuários.  | ALTA |
-|RF-003| O site deve ter uma tela de login.  | ALTA |
-|RF-004| O site deve fornecer uma maneira de a organização de doação infantil se comunicar com os doadores. | ALTA |
+|   ID  |                                     Descrição do Requisito                                         | Prioridade |
+|-------|----------------------------------------------------------------------------------------------------|------------|
+|RF-001 | O site deve ter um filtro de pesquisa onde possa selecionar  palavras-chaves do que procura.       |    MÉDIA   | 
+|RF-002 | O site deve ter informações completas sobre os usuários.                                           |    ALTA    |
+|RF-003 | O site deve ter uma tela de login.                                                                 |    ALTA    |
+|RF-004 | O site deve fornecer uma maneira de a organização de doação infantil se comunicar com os doadores. |    ALTA    |
 
 ### Requisitos não funcionais
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RNF-001| O site deve ter um ótimo desempenho. | MÉDIA | 
-|RNF-002| O site deve ser responsivo e adequar-se para diferentes tamanhos de tela. | ALTA |
-|RNF-003| O site deve ser fácil de ser usado e intuitivo.  | ALTA |
-|RNF-004| O site deve ser compatível com o Google Chrome. | ALTA |
-|RNF-005| O site deve ter medidas de segurança para proteger as informações dos doadores. | ALTA |
+|   ID  |                                     Descrição do Requisito                                         | Prioridade |
+|-------|----------------------------------------------------------------------------------------------------|------------|
+|RNF-001| O site deve ter um ótimo desempenho.                                                               |    MÉDIA   | 
+|RNF-002| O site deve ser responsivo e adequar-se para diferentes tamanhos de tela.                          |    ALTA    |
+|RNF-003| O site deve ser fácil de ser usado e intuitivo.                                                    |    ALTA    |
+|RNF-004| O site deve ser compatível com o Google Chrome.                                                    |    ALTA    |
+|RNF-005| O site deve ter medidas de segurança para proteger as informações dos doadores.                    |    ALTA    |
 
 ### Restrições
-|ID    | Descrição da Restrição |
-|------|-----------------------------------------|
-|RES-001| A equipe não pode terceirizar o desenvolvimento do projeto. | 
-|RES-002| O projeto deve ser entregue até o final do semestre letivo. |
+|   ID  |                                     Descrição da Restrição                                                      |
+|-------|-----------------------------------------------------------------------------------------------------------------|
+|RES-001| A equipe não pode terceirizar o desenvolvimento do projeto.                                                     | 
+|RES-002| O projeto deve ser entregue até o final do semestre letivo.                                                     |
 
 # Metodologia
+Nesta parte da documentação criamos uma tabela onde mostra o local onde a documentação, repositório, projeto de inteface, wireframe e gerenciamento do projeto esttá alocada. Juntamente com a tabela mostramos como a equipe está organizada.      
+
 ## Relação de Ambientes de Trabalho 
-|  Ambiente   | Plataforma  | Link de Acesso |
-|-------------|-------|----------------|
-| Documentação| GitHub | https://github.com/TIAW2023/projetotiaw-doacao-para-o-publico-infantil/blob/master/docs/relatorio/Relatorio%20Tecnico%20-%20TEMPLATE.md | 
-|Repositório de código fonte| GitHub |link |
-|Projeto de interface & Wireframes| GitHub | link |
-Gerenciamento do Projeto| Trello |https://trello.com/b/wrN9ZYIs/quadro-de-kanban|
+|             Ambiente             |  Plataforma |                                                         Link de Acesso                                                                  |
+|----------------------------------|-------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+|Documentação                      |    GitHub   | https://github.com/TIAW2023/projetotiaw-doacao-para-o-publico-infantil/blob/master/docs/relatorio/Relatorio%20Tecnico%20-%20TEMPLATE.md | 
+|Repositório de código fonte       |    GitHub   | link                                                                                                                                    |
+|Projeto de interface & Wireframes |    GitHub   | link                                                                                                                                    |
+|Gerenciamento do Projeto          |    Trello   | https://trello.com/b/wrN9ZYIs/quadro-de-kanban                                                                                          |
 
 ## Gerenciamento da Equipe 
 A equipe utiliza o Scrum como base para definição do processo de desenvolvimento.
