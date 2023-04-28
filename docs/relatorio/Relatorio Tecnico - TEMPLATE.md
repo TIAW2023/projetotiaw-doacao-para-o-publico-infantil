@@ -138,7 +138,7 @@ As tabelas a seguir apresentam os requisitos funcionais, não funcionais e as re
 |RES-002| O projeto deve ser entregue até o final do semestre letivo.                                                     |
 
 # Metodologia
-Nesta parte da documentação criamos uma tabela onde mostra o local onde a documentação, repositório, projeto de inteface, wireframe e gerenciamento do projeto esttá alocada. Juntamente com a tabela mostramos como a equipe está organizada.      
+Nesta parte da documentação criamos uma tabela onde mostra o local onde a documentação, repositório, projeto de inteface, wireframe e gerenciamento do projeto estão alocadas. Juntamente com a tabela mostramos como a equipe está organizada.      
 
 ## Relação de Ambientes de Trabalho 
 |             Ambiente             |  Plataforma |                                                         Link de Acesso                                                                  |
