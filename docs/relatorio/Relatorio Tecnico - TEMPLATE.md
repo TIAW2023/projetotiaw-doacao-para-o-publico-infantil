@@ -172,6 +172,8 @@ estamos trabalhando.
 cá.
 - **Concluído:** Nesta lista são colocadas as tarefas já concluídas.
 
+### Quadro de Kanban
+![Quadro-de-Kanban](images/quadrokanban.png)
 
 # Projeto da Solução
 
