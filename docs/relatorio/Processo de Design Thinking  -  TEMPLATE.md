@@ -51,8 +51,17 @@ Nesta parte fizemos a representação das pessoas, orgãos e organizações que 
 - **Mídia e Opinião Pública:** Mídia local, regional ou nacional, bem como influenciadores online e personalidades relevantes que possam promover o site de doações e aumentar sua visibilidade junto ao público.
 - **Empresas e Patrocinadores:**  Empresas ou organizações que podem fornecer recursos financeiros, parcerias estratégicas ou patrocínios para apoiar o site de doações, em troca de exposição ou benefícios corporativos.
 
-
 ## Diagrama de Personas
+###1° Persona:
+
+![Diagrama de Persona-1](images/Diagrama1.png)
+
+###2° Persona:
+![Diagrama de Persona-2](images/Diagrama2.png)
+
+###3° Persona:
+![Diagrama de Persona-3](images/Diagrama3.png)
+
 
 ## Mural de Possibilidades
 Nesta parte listamos diferentes ideias em um quadro e dentre elas escolhemos as duas melhores para detalharmos.
