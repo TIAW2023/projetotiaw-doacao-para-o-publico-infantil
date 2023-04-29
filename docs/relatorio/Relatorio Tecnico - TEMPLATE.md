@@ -212,14 +212,10 @@ Para fazer os wireframes e o fluxo de usuário nosso grupo optou por utilizar o 
 
 ## Fluxo de usuário. 
 
-......  COLOQUE AQUI O SEU TEXTO OU DIAGRAMA DE NAVEGAÇÃO .......
+Nesta parte fazemos o fluxo das atividades do site.
 
-> Inclua uma descrição textual ou um diagrama mostrando, sequencialmente, quais ações
-> um usuário deve realizar para utilizar todas as características do seu sistema. 
+![Fluxo de usuário](images/fluxo.png)
 
-
-> **Exemplo de Diagrama (opcional, pode ser em texto)**
-> ![Exemplo de Diagrama de Navegação](images/userflow.jpg)
 
 # Conclusões
 
