@@ -52,14 +52,16 @@ Nesta parte fizemos a representação das pessoas, orgãos e organizações que 
 - **Empresas e Patrocinadores:**  Empresas ou organizações que podem fornecer recursos financeiros, parcerias estratégicas ou patrocínios para apoiar o site de doações, em troca de exposição ou benefícios corporativos.
 
 ## Diagrama de Personas
-###1° Persona:
+### 1° Persona:
 
 ![Diagrama de Persona-1](images/Diagrama1.png)
 
-###2° Persona:
+### 2° Persona:
+
 ![Diagrama de Persona-2](images/Diagrama2.png)
 
-###3° Persona:
+### 3° Persona:
+
 ![Diagrama de Persona-3](images/Diagrama3.png)
 
 
