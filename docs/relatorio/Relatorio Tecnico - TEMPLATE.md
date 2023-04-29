@@ -100,14 +100,8 @@ O foco deste trabalho está em todas as pessoas, como:
 Nesta parte da documentação criamos 3 personas que representarão os possíveis usuários que utilizarão o nosso site. Juntamente com a criação das personas fizemos os requisitos do nosso site.  
 
 ## Personas
-**1° Persona**
-![Persona1](images/Persona1.jpg)
 
-**2° Persona**
-![Persona2](images/Persona2.jpg)
-
-**3° Persona**
-![Persona3](images/Persona3.jpg)
+![Personas](images/Personas.jpg)
 
 ## Requisitos
 
