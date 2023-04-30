@@ -138,8 +138,8 @@ Nesta parte da documentação criamos uma tabela onde mostra o local onde a docu
 |             Ambiente             |     Plataforma    |                                                         Link de Acesso                                                                  |
 |----------------------------------|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 |Documentação                      |    GitHub         | https://github.com/TIAW2023/projetotiaw-doacao-para-o-publico-infantil/blob/master/docs/relatorio/Relatorio%20Tecnico%20-%20TEMPLATE.md | 
-|Repositório de código fonte       |    GitHub         | link                                                                                                                                    |
-|Projeto de interface & Wireframes |    Google Drive   | https://drive.google.com/drive/folders/1AgamKD8nvYg_tEi0Z0Cg-067wkyfizLd?usp=share_link                                                 |                                                                                                                                |
+|Repositório de código fonte       |    GitHub         | https://github.com/TIAW2023/projetotiaw-doacao-para-o-publico-infantil/tree/master/codigo                                               |
+|Projeto de interface & Wireframes |    Google Drive   | https://drive.google.com/drive/folders/1AgamKD8nvYg_tEi0Z0Cg-067wkyfizLd?usp=share_link                                                 |                                                                                                                                
 |Gerenciamento do Projeto          |    Trello         | https://trello.com/b/wrN9ZYIs/quadro-de-kanban                                                                                          |
 
 ## Gerenciamento da Equipe 
