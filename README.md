@@ -31,5 +31,23 @@ Este *template* adota a seguinte estrutura de diretórios:
 - `codigo`
   - `CSS`
   - `HTML`
+  - `JavaScript`
 - `docs`
    - `relatorio`
+      - `images`
+      - Processo de Design Thinking - TEMPLATE.md
+      - Relatorio Tecnico - TEMPLATE.md
+   
+## codigo
+Este diretório armazena todo o código fonte do projeto e adota uma hierarquia básica de projetos Web simples, que utilizam as tecnologias HTML, CSS e JavaScript:
+
+- O diretório `CSS` armazena todo o código CSS do projeto.
+- O diretório `HTML` armazena todo o código HTML do projeto.
+- O diretório `JavaScript` armazena todo o código JavaScript do projeto.
+
+## docs
+Esta pasta arquiva toda a documentação do projeto.
+
+Na pasta `docs`, possuí uma subpasta `relatorio`, que também possui uma subpasta `images`, onde está arquivada todas as imagens utilizadas para a elaboração dos documentos [Processo de Design Thinking - TEMPLATE.md](docs/relatorio/Processo%20de%20Design%20Thinking%20%20-%20%20TEMPLATE.md) e [Relatorio Tecnico - TEMPLATE.md](docs/relatorio/Relatorio%20Tecnico%20-%20TEMPLATE.md)
+
+
