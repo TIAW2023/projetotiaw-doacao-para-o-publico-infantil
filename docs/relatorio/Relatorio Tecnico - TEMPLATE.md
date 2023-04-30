@@ -135,12 +135,12 @@ As tabelas a seguir apresentam os requisitos funcionais, não funcionais e as re
 Nesta parte da documentação criamos uma tabela onde mostra o local onde a documentação, repositório, projeto de inteface, wireframe e gerenciamento do projeto estão alocadas. Juntamente com a tabela mostramos como a equipe está organizada.      
 
 ## Relação de Ambientes de Trabalho 
-|             Ambiente             |  Plataforma |                                                                             Link de Acesso                                                                  |
-|----------------------------------|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|Documentação                      |    GitHub   | https://github.com/TIAW2023/projetotiaw-doacao-para-o-publico-infantil/blob/master/docs/relatorio/Relatorio%20Tecnico%20-%20TEMPLATE.md                     | 
-|Repositório de código fonte       |    GitHub   | link                                                                                                                                                        |
-|Projeto de interface & Wireframes |    GitHub   | https://github.com/TIAW2023/projetotiaw-doacao-para-o-publico-infantil/blob/master/docs/relatorio/Relatorio%20Tecnico%20-%20TEMPLATE.md#projeto-de-interface|                                                                                                                                |
-|Gerenciamento do Projeto          |    Trello   | https://trello.com/b/wrN9ZYIs/quadro-de-kanban                                                                                                              |
+|             Ambiente             |     Plataforma    |                                                         Link de Acesso                                                                  |
+|----------------------------------|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+|Documentação                      |    GitHub         | https://github.com/TIAW2023/projetotiaw-doacao-para-o-publico-infantil/blob/master/docs/relatorio/Relatorio%20Tecnico%20-%20TEMPLATE.md | 
+|Repositório de código fonte       |    GitHub         | link                                                                                                                                    |
+|Projeto de interface & Wireframes |    Google Drive   | https://drive.google.com/drive/folders/1AgamKD8nvYg_tEi0Z0Cg-067wkyfizLd?usp=share_link                                                 |                                                                                                                                |
+|Gerenciamento do Projeto          |    Trello         | https://trello.com/b/wrN9ZYIs/quadro-de-kanban                                                                                          |
 
 ## Gerenciamento da Equipe 
 A equipe utiliza o Scrum como base para definição do processo de desenvolvimento.
