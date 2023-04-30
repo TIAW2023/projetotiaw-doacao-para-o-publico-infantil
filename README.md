@@ -26,4 +26,10 @@ Por meio da ultilização do nosso site, facilitando assim, a comunicação entr
 https://trello.com/b/wrN9ZYIs/quadro-de-kanban
 
 ## Instruções para uso
-Coloque aqui as instruções para acessar a página inicial do projeto (caminho completo do arquivo
+Este *template* adota a seguinte estrutura de diretórios:
+
+- `codigo`
+  - `CSS`
+  - `HTML`
+- `docs`
+   - `relatorio`
