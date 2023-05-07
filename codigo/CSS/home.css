@@ -3,22 +3,22 @@
     padding: 0%;
 }
 
+/*Logo*/
 .logo {
-    width: 90%;
-    height: 70%;
+    width: 70%;
 }
 
+/*Cores de Fundo*/
 header, footer{
     background-color: rgb(255, 255, 255);
 }
 
 body, .doacao{
-    background-color: rgb(108, 209, 235);
+    background-color:rgba(255, 0, 76, 0.603);
 }
 
 #palava{
     background-color: rgb(255, 255, 255);
-    border-color: black;
     border: solid;
     height: 510px;
 }
@@ -28,13 +28,6 @@ body, .doacao{
     border: solid;
     height: 510px;
     overflow-y: scroll;
-}
-
-.texto{
-    overflow-y: scroll;
-    height: 120px;
-    width: 670px;
-    background-color: rgb(245, 245, 245);
 }
 
 .form-check-input{
@@ -50,21 +43,49 @@ a {
     height: 9%;
 }
 
-#footer {
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
-}
-
 #enviados{
-    background-color: rgba(111, 189, 219, 0.507);
-    border: solid;
-    padding-left: 2%;
+    background-color: #ffffff;
     padding-bottom: 2%;
-    margin-left: 1px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .img{
-    height: 95%;
     width: 100%;
+    border: solid;
+    border-radius: 10%;
+}
+
+.linha{
+    color: rgb(0, 0, 0);
+
+}
+
+/*-------------------------------Mudança de cor-------------------------------*/
+.acessos:hover {
+    color: rgba(255, 0, 76, 0.815);
+    cursor: pointer;
+    transition-duration: 380ms;
+}
+
+a:hover {
+    color: rgba(255, 0, 76, 0.603);
+    cursor: pointer;
+    transition-duration: 380ms;
+}
+
+#submit:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 0, 76, 0.603);
+    cursor: pointer;
+    transition-duration: 380ms;
+}
+/*---------------------------Media Query---------------------------*/
+
+@media screen and (max-width: 768px){
+    .logo{display: none;}
+    .acessos{
+        font-size: 100%;
+    }
+    
 }
