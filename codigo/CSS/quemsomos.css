@@ -23,11 +23,15 @@ body, .doacao{
     height: 510px;
 }
 
-#resultado{
+#quemsomos{
     background-color: rgb(255, 255, 255);
     border: solid;
-    height: 510px;
+    height: 420px;
     overflow-y: scroll;
+}
+
+.sobrenos{
+   color:  rgba(255, 0, 76, 0.603);
 }
 
 .form-check-input{
@@ -38,27 +42,10 @@ a {
     text-decoration: none;
 }
 
-.submit{
-    width: 100%;
-    height: 9%;
-}
-
-#enviados{
-    background-color: #ffffff;
-    padding-bottom: 2%;
-    margin-left: 2px;
-    margin-right: 2px;
-}
-
 .img{
     width: 100%;
     border: solid;
     border-radius: 10%;
-}
-
-.linha{
-    color: rgb(0, 0, 0);
-
 }
 
 /*-------------------------------Mudança de cor-------------------------------*/
@@ -85,7 +72,7 @@ a:hover {
 @media screen and (max-width: 768px){
     .logo{display: none;}
     .acessos{
-        font-size: 100%;
+        font-size: 97%;
     }
     
 }
