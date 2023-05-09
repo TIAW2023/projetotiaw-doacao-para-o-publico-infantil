@@ -61,6 +61,12 @@ a {
 
 }
 
+footer {
+    position: absolute;
+    bottom: absolute;
+    width: 100%;
+}
+
 /*-------------------------------Mudança de cor-------------------------------*/
 .acessos:hover {
     color: rgba(255, 0, 76, 0.815);
