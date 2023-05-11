@@ -5,7 +5,7 @@ header {
     justify-content: space-around;
     text-align: center;
     height: 80px;
-    background-color: rgba(255, 0, 76, 0.603);
+    background-color: rgba(253, 85, 135, 0.767);
   }
   
   .nav-item a {
@@ -20,7 +20,7 @@ header {
   footer {
     align-items: center;
     text-align: center;
-    background-color: rgba(255, 0, 76, 0.603);
+    background-color: rgba(253, 85, 135, 0.767);
   }
   
   a {
