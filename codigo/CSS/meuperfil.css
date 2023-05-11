@@ -1,8 +1,54 @@
+header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    height: 80px;
+    background-color: rgba(255, 0, 76, 0.603);
+  }
+  
+  .nav-item a {
+    color: white;
+  }
+  
+  .nav-item a:hover {
+    cursor: pointer;
+    color: black;
+  }
+
+  footer {
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 0, 76, 0.603);
+  }
+  
+  a {
+    color: white;
+  }
+
+  a:hover {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition-duration: 380ms;
+}
+  
+
 footer {
     position: absolute;
     bottom: 0%;
     width: 100%;
 }
+
+.doacao {
+    background-color: white;
+}
+
+.branco {
+    color: white;
+}
+
+
 
 @media (min-width: 0px) and (max-width: 991px){
     
