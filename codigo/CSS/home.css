@@ -2,7 +2,122 @@
     margin: 0%;
     padding: 0%;
 }
+* {
+    margin: 0%;
+    padding: 0%;
+}
 
+/*Logo*/
+.logo {
+    width: 65%;
+}
+
+/*Cores de Fundo*/
+header,
+footer {
+    background-color: rgba(253, 85, 135, 0.767);
+}
+
+body,
+.doacao {
+    background-color: rgb(255, 255, 255);
+}
+
+#palava {
+    background-color: rgb(255, 255, 255);
+    border: solid;
+    height: 510px;
+}
+
+#resultado {
+    background-color: rgb(255, 255, 255);
+    border: solid;
+    height: 510px;
+    overflow-y: scroll;
+}
+
+.form-check-input {
+    border-color: black;
+}
+
+a,.ptexto,b,.navbar-brand,.nav-link {
+    text-decoration: none;
+    color:rgb(5, 5, 5)
+}
+
+.submit {
+    width: 100%;
+    height: 9%;
+}
+
+#enviados {
+    background-color: #ffffff;
+    padding-bottom: 2%;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.img {
+    width: 100%;
+    border: solid;
+    border-radius: 10%;
+}
+
+.linha {
+    color: rgb(0, 0, 0);
+
+}
+
+.navbar-toggler{
+    border-color: rgb(17, 16, 16);
+}
+
+footer {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+/*-------------------------------Mudança de cor-------------------------------*/
+
+a:hover, .navbar-brand:hover {
+    color: rgba(250, 250, 250, 0.993);
+    cursor: pointer;
+    transition-duration: 380ms;
+}
+
+#submit:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 0, 76, 0.603);
+    cursor: pointer;
+    transition-duration: 380ms;
+}
+
+.nav-link:hover{
+    color: rgba(255, 255, 255, 0.993);
+    cursor: pointer;
+    transition-duration: 80ms;
+}
+
+.navbar-toggler:hover{
+    border-color: rgb(250, 250, 250);
+}
+
+
+/*---------------------------Media Query---------------------------*/
+
+@media (min-width: 0px) and (max-width: 991px) {
+
+    #footer {
+        position: absolute;
+        bottom: inherit;
+        width: 100%;
+    }
+
+}
 /*Logo*/
 .logo {
     width: 70%;
