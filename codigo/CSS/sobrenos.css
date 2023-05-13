@@ -15,7 +15,7 @@ body, .doacao{
 
 #quemsomos{
     background-color: rgb(255, 255, 255);
-    border: solid;
+    
     height: 510px;
 }
 
@@ -24,7 +24,7 @@ body, .doacao{
 }
 
 .form-check-input{
-    border-color: black;
+    border-color: #000000;
 }
 
 a,.ptexto,b,.navbar-brand,.nav-link {
@@ -42,7 +42,7 @@ footer {
 }
 
 .navbar-toggler{
-    border-color: rgb(17, 16, 16);
+    border-color: rgb(0, 0, 0);
 }
 
 
