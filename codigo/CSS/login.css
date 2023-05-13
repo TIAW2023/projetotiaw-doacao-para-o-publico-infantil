@@ -1,1 +1,26 @@
+body {
+    background-color: rgba(253, 85, 135, 0.767);
+}
 
+hr {
+    color: rgb(0, 0, 0);
+}
+
+.list-group-item {
+    color: black;
+}
+
+.btn, .form-control, .card, .input{
+    background-color: white;
+    border-color: black;
+}
+
+.btn:hover{
+    border-color: black;
+    color: white;
+    background-color:rgba(253, 85, 135, 0.767);
+}
+
+a:hover{
+    color:rgb(0, 0, 0);
+}
