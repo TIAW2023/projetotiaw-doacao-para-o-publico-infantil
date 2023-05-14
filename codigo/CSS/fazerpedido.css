@@ -1,149 +1,146 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .header-container {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: space-around;
-    text-align: center;
-    height: 80px;
-    background-color: rgba(255, 0, 76, 0.603);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  height: 80px;
+  background-color: rgba(255, 0, 76, 0.603);
 }
 
 .nav-item a {
-    color: white;
+  color: white;
 }
 
 .nav-item a:hover {
-    cursor: pointer;
-    color: black;
+  cursor: pointer;
+  color: black;
 }
 
 .btn-pesquisar {
-    padding: 5px;
-    width: 50%;
-    border-radius: 5px;
+  padding: 5px;
+  width: 50%;
+  border-radius: 5px;
 }
 
 .btn-pesquisar:hover {
-    color: white;
-    background-color: rgba(255, 0, 76, 0.603);
+  color: white;
+  background-color: rgba(255, 0, 76, 0.603);
 }
 
 .container {
-    margin-top: 30px;
-    border: 2px solid black;
-    border-radius: 10px;
+  margin-top: 30px;
+  border: 2px solid black;
+  border-radius: 10px;
 }
 
 .logo {
-    width: 70%;
+  width: 70%;
 }
 
 .input {
-    width: 100%;
+  width: 100%;
 }
 
 .btn-foto {
-    width: 50%;
-    margin: 6px;
-    padding: 5px;
-    border-radius: 5px;
+  width: 50%;
+  margin: 6px;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .btn-foto:hover {
-    color: white;
-    background-color: rgba(255, 0, 76, 0.603);
+  color: white;
+  background-color: rgba(255, 0, 76, 0.603);
 }
 
 .btn-text-area {
-    margin: 6px;
-    width: 80%;
-    padding: 5px;
-    border-radius: 5px;
+  margin: 6px;
+  width: 80%;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .btn-text-area:hover {
-    color: white;
-    background-color: rgba(255, 0, 76, 0.603);
+  color: white;
+  background-color: rgba(255, 0, 76, 0.603);
 }
 
 .foto {
-    width: 250px;
-    height: 150px;
-    border: 2px solid black;
-    margin: 20px;
-    text-align: center;
-    justify-content: center;
+  width: 250px;
+  height: 150px;
+  border: 2px solid black;
+  margin: 20px;
+  text-align: center;
+  justify-content: center;
 }
 
 .Copyright {
-    background-color: white;
+  background-color: white;
 }
 
 footer {
-    display: 0%;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    background-color: rgba(255, 0, 76, 0.603);
+  display: 0%;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(255, 0, 76, 0.603);
 }
 
 .a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 /*-------------------------------Mudança de cor-------------------------------*/
 
 .acessos:hover {
-    color: black;
-    cursor: pointer;
-    transition-duration: 380ms;
+  color: black;
+  cursor: pointer;
+  transition-duration: 380ms;
 }
 
 .company {
-    font-size: 15px;
-    text-align: center;
-    background-color: black;
-    color: white;
+  font-size: 15px;
+  text-align: center;
+  background-color: black;
+  color: white;
 }
 
 a:hover {
-    color: black;
-    cursor: pointer;
-    transition-duration: 380ms;
+  color: black;
+  cursor: pointer;
+  transition-duration: 380ms;
 }
 
 #submit:hover {
-    color: rgb(0, 0, 0);
-    background-color: rgba(255, 0, 76, 0.603);
-    cursor: pointer;
-    transition-duration: 380ms;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 0, 76, 0.603);
+  cursor: pointer;
+  transition-duration: 380ms;
 }
 
 /*---------------------------Media Query---------------------------*/
 
 @media screen and (max-width: 768px) {
-    .logo {
-        display: none;
-    }
+  .logo {
+    display: none;
+  }
 
-    .acessos {
-        font-size: 100%;
-    }
+  .acessos {
+    font-size: 100%;
+  }
 }
 
-
 @media (min-width: 0px) and (max-width: 991px) {
-
-    #footer {
-        position: absolute;
-        bottom: inherit;
-        width: 100%;
-    }
-
+  #footer {
+    position: absolute;
+    bottom: inherit;
+    width: 100%;
+  }
 }
