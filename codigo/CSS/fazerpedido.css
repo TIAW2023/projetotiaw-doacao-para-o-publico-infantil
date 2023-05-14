@@ -3,13 +3,7 @@
   padding: 0;
 }
 
-.header-container {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: space-around;
-  text-align: center;
-  height: 80px;
+header {
   background-color: rgba(255, 0, 76, 0.603);
 }
 
