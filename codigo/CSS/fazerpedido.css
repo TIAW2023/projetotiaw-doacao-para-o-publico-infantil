@@ -1,7 +1,18 @@
-
 * {
   margin: 0%;
   padding: 0%;
+}
+
+/* Chrome e outros */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 /*Logo*/
@@ -41,6 +52,55 @@ b,
 
 .navbar-toggler {
   border-color: rgb(17, 16, 16);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.buscar-button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.btn-observaçoes:hover {
+  color: white;
+  background-color: rgba(255, 0, 76, 0.603);
+}
+
+.btn-salvar {
+  margin-top: 10px;
+  padding: 3px;
+  width: 80px;
+}
+
+.btn-salvar:hover {
+  color: white;
+  background-color: rgba(255, 0, 76, 0.603);
+}
+
+.btn-salvartudo {
+  width: 35%;
+}
+.btn-salvartudo:hover {
+  color: white;
+  background-color: rgba(255, 0, 76, 0.603);
+}
+
+.btn-salvartudo .btn-cep {
+  margin-top: 10px;
+  padding: 3px;
+  width: 80px;
+}
+.btn-cep:hover {
+  color: white;
+  background-color: rgba(255, 0, 76, 0.603);
+}
+
+.Enviar-btn:hover {
+  color: white;
+  background-color: rgba(255, 0, 76, 0.603);
 }
 
 footer {
@@ -215,9 +275,9 @@ a:hover {
 }
 
 .btn-foto {
-  width: 50%;
+  width: 100%;
   margin: 6px;
-  padding: 5px;
+  padding: 2px;
   border-radius: 5px;
 }
 
@@ -239,8 +299,8 @@ a:hover {
 }
 
 .foto {
-  width: 250px;
-  height: 150px;
+  width: 200px;
+  height: 120px;
   border: 2px solid black;
   margin: 20px;
   text-align: center;
