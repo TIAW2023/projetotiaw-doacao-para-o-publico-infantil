@@ -29,7 +29,7 @@ function imprimir() {
                                         </div>
                                         <div class="row">
                                             <div class="col-auto">
-                                                Rua: ${pessoas[i].endereco.rua}, ${pessoas[i].endereco.numero}, ${pessoas[i].endereco.bairro}, ${pessoas[i].endereco.cidade}, ${pessoas[i].endereco.estado}.
+                                                ${pessoas[i].endereco.rua}, ${pessoas[i].endereco.numero}, ${pessoas[i].endereco.bairro}, ${pessoas[i].endereco.cidade}, ${pessoas[i].endereco.estado}.
                                             </div>
                                         </div>
                                         <div class="row">
