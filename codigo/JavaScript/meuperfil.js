@@ -153,7 +153,7 @@ function editarContato() {
 
         alert("Informações editadas com sucesso!");
 
-        $('#exampleModal').modal('hide.close');
+       $("#modal .close").click();
         
         exibirContatos();
     }
