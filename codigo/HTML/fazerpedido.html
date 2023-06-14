@@ -18,26 +18,27 @@
     <header class="header-container">
         <nav class="navbar navbar-expand-md acessorapido">
             <div class="container-fluid">
-              <a class="navbar-brand fs-4"  href="home.html">Doação Infantil</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-                <ul class="navbar-nav justify-content-end">
-                    <li class="nav-item">
-                        <a class="nav-link fs-5" href="#">Sobre nós</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fs-5" href="#">Fazer Pedido</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fs-5" href="#">Login/Cadastro</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fs-5" href="#">Meu Perfil</a>
-                    </li>
-                </ul>
-              </div>
+                <a class="navbar-brand fs-4" href="home.html">Doação Infantil</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                    <ul class="navbar-nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link fs-5" href="#">Sobre nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5" href="#">Fazer Pedido</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5" href="#">Login/Cadastro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5" href="#">Meu Perfil</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -45,74 +46,79 @@
         <div class="row">
             <div class="col-md-12 col-lg-6">
                 <div class="row justify-content-center">
-                    
-                 
+
+
                     <div class="col-auto col-md-12 mt-3">
-                          <p>Digite seu nome se for pessoa fisica, nome da empresa se pessoa juridica: </p>
-                          <label for="nome">Nome:</label>
-                          <input type="text" id="nome" name="nome" placeholder="Digite seu Nome"   pattern=".{4,}" title="O nome deve ter no mínimo 4 caracteres" required><br>  
+                        <p>Digite seu nome se for pessoa fisica, nome da empresa se pessoa juridica: </p>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu Nome" pattern=".{4,}"
+                            title="O nome deve ter no mínimo 4 caracteres" required><br>
                         <br>
-                       
+
                         <label for="cep">CEP:</label>
-                        <input type="text" id="cep" name="cep" maxlength="9" onblur="buscarEndereco()" oninput="limparEndereco()" placeholder="Digite seu Cep">
-                        <button  class="btn-cep" conclick="buscarEndereco()">Buscar</button>
-                        
+                        <input type="text" id="cep" name="cep" maxlength="9" onblur="buscarEndereco()"
+                            oninput="limparEndereco()" placeholder="Digite seu Cep">
+                        <button class="btn-cep" conclick="buscarEndereco()">Buscar</button>
+
                         <br>
                     </div>
                 </div>
                 <br>
                 <div class="row">
-                   
-                    <div class="col-md-4"><input type="text"  id="rua" name="opcao" disabled placeholder="Rua...">  </div>
-                   
-                    <div class="col-md-4"><input type="text" id="numero" name="opcao"  placeholder="Numero..." ></div>
-                    
-                    <div class="col-md-4"><input type="text"  id="bairro" name="opcao" disabled placeholder="Bairro..."> </div>
+
+                    <div class="col-md-4"><input type="text" id="rua" name="opcao" disabled placeholder="Rua..."> </div>
+
+                    <div class="col-md-4"><input type="text" id="numero" name="opcao" placeholder="Numero..."></div>
+
+                    <div class="col-md-4"><input type="text" id="bairro" name="opcao" disabled placeholder="Bairro...">
+                    </div>
                 </div>
                 <br>
                 <div class="row">
-                    <div class="col-md-4"><input type="text" id="cidade" name="opcao" disabled placeholder="Cidade ..." ...></div>
-                    <div class="col-md-4"><input type="text" id="estado" name="opcao" disabled placeholder="Estado ..."></div>
+                    <div class="col-md-4"><input type="text" id="cidade" name="opcao" disabled placeholder="Cidade ..."
+                            ...></div>
+                    <div class="col-md-4"><input type="text" id="estado" name="opcao" disabled placeholder="Estado ...">
+                    </div>
                 </div>
                 <script>
-                  
-        function buscarEndereco() {
-            const cep = document.getElementById('cep').value;
-            const url = `https://viacep.com.br/ws/${cep}/json/`;
 
-            fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('rua').value = data.logradouro;
-                    document.getElementById('bairro').value = data.bairro;
-                    document.getElementById('cidade').value = data.localidade;
-                    document.getElementById('estado').value = data.uf;
-                })
-                .catch(error => console.log(error));
-        }
-        
-        function limparEndereco() {
-            document.getElementById('rua').value = '';
-            document.getElementById('bairro').value = '';
-            document.getElementById('cidade').value = '';
-            document.getElementById('estado').value = '';
-        }
-    </script>
+                    function buscarEndereco() {
+                        const cep = document.getElementById('cep').value;
+                        const url = `https://viacep.com.br/ws/${cep}/json/`;
+
+                        fetch(url)
+                            .then(response => response.json())
+                            .then(data => {
+                                document.getElementById('rua').value = data.logradouro;
+                                document.getElementById('bairro').value = data.bairro;
+                                document.getElementById('cidade').value = data.localidade;
+                                document.getElementById('estado').value = data.uf;
+                            })
+                            .catch(error => console.log(error));
+                    }
+
+                    function limparEndereco() {
+                        document.getElementById('rua').value = '';
+                        document.getElementById('bairro').value = '';
+                        document.getElementById('cidade').value = '';
+                        document.getElementById('estado').value = '';
+                    }
+                </script>
 
 
                 <br>
                 <div class="row">
                     <div class="card-body">
                         <div class="col">
-                            <p>Digite  sobre o que se trata :</p>
-                            <textarea id="observacoes"  class="d-block w-100" style="resize: none;"></textarea>
+                            <p>Digite sobre o que se trata :</p>
+                            <textarea id="observacoes" class="d-block w-100"></textarea>
                         </div>
                     </div>
 
                 </div>
                 <div class="row">
                     <div class="col mt-3">
-                      <center><button  class="btn-salvartudo"  onclick="salvarPessoa()">Salvar Dados da Pessoa</button></center>
+                        <center><button class="btn-salvartudo btnsalvar1" onclick="salvarPessoa()">Salvar</button></center>
                     </div>
                 </div>
             </div>
@@ -128,68 +134,78 @@
                 <!-- <label for="opcao">Selecione uma opção:</label -->
                 <chec id="opcao">
                     <div class="form-check fs-5">
-                        <input class="form-check-input" type="checkbox" name="opcao"  value="Roupas" id="flexCheckDefault">
+                        <input class="form-check-input" id="borda" type="checkbox" name="opcao" value="Roupas"
+                            id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Roupas
                         </label>
                     </div>
                     <div class="form-check fs-5">
-                        <input class="form-check-input" type="checkbox" name="opcao"  value="Calças" id="flexCheckDefault">
+                        <input class="form-check-input" id="borda" type="checkbox" name="opcao" value="Calças"
+                            id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Calças
                         </label>
                     </div>
                     <div class="form-check fs-5">
-                        <input class="form-check-input" type="checkbox" name="opcao"  value="Alimento Não-Perecível" id="flexCheckDefault">
+                        <input class="form-check-input" id="borda" type="checkbox" name="opcao" value="Alimento Não-Perecível"
+                            id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Alimento Não-Perecível
                         </label>
                     </div>
                     <div class="form-check fs-5">
-                        <input class="form-check-input" type="checkbox" name="opcao"  value=" Alimento Perecível" id="flexCheckDefault">
+                        <input class="form-check-input" id="borda" type="checkbox" name="opcao" value=" Alimento Perecível"
+                            id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Alimento Perecível
                         </label>
                     </div>
                     <div class="form-check fs-5">
-                        <input class="form-check-input" type="checkbox" name="opcao"  value=" Calçados" id="flexCheckDefault">
+                        <input class="form-check-input" id="borda" type="checkbox" name="opcao" value=" Calçados"
+                            id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Calçados
                         </label>
                     </div>
                     <div class="form-check fs-5">
-                        <input class="form-check-input" type="checkbox" name="opcao"  value=" Coberta" id="flexCheckDefault">
+                        <input class="form-check-input" id="borda" type="checkbox" name="opcao" value=" Coberta"
+                            id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Coberta
                         </label>
                     </div>
                     <div class="form-check fs-5">
-                        <input class="form-check-input" type="checkbox" name="opcao"  value=" Brinquedos" id="flexCheckDefault">
+                        <input class="form-check-input" id="borda" type="checkbox" name="opcao" value=" Brinquedos"
+                            id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Brinquedos
                         </label>
                     </div>
                     <div class="form-check fs-5">
-                        <input class="form-check-input" type="checkbox" name="opcao"  value="Itens de Higiene Pessoal" id="flexCheckDefault">
+                        <input class="form-check-input" id="borda" type="checkbox" name="opcao" value="Itens de Higiene Pessoal"
+                            id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Itens de Higiene Pessoal
                         </label>
                     </div>
                     <div class="form-check fs-5">
-                        <input class="form-check-input" type="checkbox" value="Livros" id="flexCheckDefault">
+                        <input class="form-check-input" id="borda" type="checkbox" value="Livros" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Livros
                         </label>
                     </div>
                     <div class="form-check fs-5">
-                        <input class="form-check-input" type="checkbox" name="opcao"  value="Fraldas" id="flexCheckDefault">
+                        <input class="form-check-input" id="borda" type="checkbox" name="opcao" value="Fraldas"
+                            id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Fraldas
                         </label>
-                        
+
                     </div>
-                </select>
+                    </select>
             </div>
+            <center><button class="btn-salvartudo btnsalvar2 my-2" onclick="salvarPessoa()">Salvar</button></center>
         </div>
 
         </div>
@@ -224,13 +240,13 @@
             </div>
         </div>
         <center class="Copyright">Copyright @ 2023 - Doação Infantil</center>
-    </footer> 
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-        <script src="script.js"></script>
-        
+    <script src="fazerpedido.js"></script>
+
 </body>
 
 </html>
