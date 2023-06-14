@@ -10,17 +10,10 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-/* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
-/*Logo*/
 .logo {
   width: 65%;
 }
 
-/*Cores de Fundo*/
 header,
 footer {
   background-color: rgba(253, 85, 135, 0.767);
@@ -83,6 +76,7 @@ b,
 .btn-salvartudo {
   width: 35%;
 }
+
 .btn-salvartudo:hover {
   color: white;
   background-color: rgba(255, 0, 76, 0.603);
@@ -93,6 +87,7 @@ b,
   padding: 3px;
   width: 80px;
 }
+
 .btn-cep:hover {
   color: white;
   background-color: rgba(255, 0, 76, 0.603);
@@ -112,9 +107,7 @@ footer {
   text-align: center;
 }
 
-/*-------------------------------Mudança de cor-------------------------------*/
-
-a:hover,
+de cor-------------------------------/ a:hover,
 .navbar-brand:hover {
   color: rgba(250, 250, 250, 0.993);
   cursor: pointer;
@@ -131,8 +124,6 @@ a:hover,
   border-color: rgb(250, 250, 250);
 }
 
-/*---------------------------Media Query---------------------------*/
-
 @media (min-width: 0px) and (max-width: 991px) {
   #footer {
     position: absolute;
@@ -140,12 +131,11 @@ a:hover,
     width: 100%;
   }
 }
-/*Logo*/
+
 .logo {
   width: 70%;
 }
 
-/*Cores de Fundo*/
 header,
 footer {
   background-color: rgba(253, 85, 135, 0.767);
@@ -188,8 +178,7 @@ footer {
   text-align: center;
 }
 
-/*-------------------------------Mudança de cor-------------------------------*/
-.acessos:hover {
+cor-------------------------------/ .acessos:hover {
   color: rgb(0, 0, 0);
   cursor: pointer;
   transition-duration: 380ms;
@@ -207,8 +196,6 @@ a:hover {
   cursor: pointer;
   transition-duration: 380ms;
 }
-
-/*---------------------------Media Query---------------------------*/
 
 @media screen and (max-width: 768px) {
   .logo {
@@ -312,9 +299,7 @@ a:hover {
   text-decoration: none;
 }
 
-/*-------------------------------Mudança de cor-------------------------------*/
-
-.acessos:hover {
+cor-------------------------------/ .acessos:hover {
   color: white;
   cursor: pointer;
   transition-duration: 380ms;
@@ -331,4 +316,29 @@ a:hover {
   color: white;
   cursor: pointer;
   transition-duration: 380ms;
+}
+
+#borda {
+  border-color: rgb(0, 0, 0);
+}
+
+.btnsalvar2 {
+  display: none;
+}
+@media (max-width: 991px) {
+  .btnsalvar2 {
+    display: flex;
+  }
+  .btnsalvar1 {
+    display: none;
+  }
+}
+
+@media (max-width: 9px) {
+  .btnsalvar1 {
+    display: none;
+  }
+  .btnsalvar2 {
+    display: flex;
+  }
 }
