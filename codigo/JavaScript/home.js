@@ -26,33 +26,41 @@ function imprimir() {
 
         var quant = 0;
         // Gerar a string HTML para exibir os produtos filtrados
-        produtosFiltrados.forEach(function (pessoa) {
+        function quebrarLinha(texto, caracteresPorLinha) {
+            const regex = new RegExp(`.{1,${caracteresPorLinha}}`, 'g');
+            return texto.match(regex).join('\n');
+          }
+          
+          produtosFiltrados.forEach(function (pessoa) {
+            const observacoesQuebradas = quebrarLinha(pessoa.observacoes, 50);
+          
             strHtml += `
-                    <div class="mx-2">
-                        <div class="row fs-2 mt-2">
-                            <div class="col-auto">
-                                ${pessoa.nome}
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-auto">
-                                ${pessoa.endereco.rua}, ${pessoa.endereco.numero}, ${pessoa.endereco.bairro}, ${pessoa.endereco.cidade}, ${pessoa.endereco.estado}.
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 mt-3">
-                                <p>${pessoa.observacoes}</p>
-                            </div>  
-                        </div>    
-                        <div class="row">
-                            <div class="col-auto my-2">
-                                <b>Palavras-Chave: </b>${pessoa.opcoes}.
-                            </div>
-                        </div>    
-                        <hr class="linha">
-                    </div>`;
+              <div class="mx-2">
+                <div class="row fs-2 mt-2">
+                  <div class="col-auto">
+                    ${pessoa.nome}
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-auto">
+                    ${pessoa.endereco.rua}, ${pessoa.endereco.numero}, ${pessoa.endereco.bairro}, ${pessoa.endereco.cidade}, ${pessoa.endereco.estado}.
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 mt-3">
+                    <p style="white-space: pre-line;">${observacoesQuebradas}</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-auto my-2">
+                    <b>Palavras-Chave: </b>${pessoa.opcoes}.
+                  </div>
+                </div>
+                <hr class="linha">
+              </div>`;
+            
             quant++;
-        });
+          });
         if (quant === 0) { alert("Pedido não encontrado!"); }
 
         // Exibir os produtos filtrados na tela
