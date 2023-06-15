@@ -1,5 +1,5 @@
 let bancoDados = JSON.parse(localStorage.getItem("dados"));
-
+var bio = "Oi, me chamo João, tenho 35 anos e amo fazer doações.";
 if (!bancoDados) {
 
     bancoDados = [
@@ -8,7 +8,7 @@ if (!bancoDados) {
             "emailCliente": "joaoemaria@gmail.com",
             "cpfCliente": "222 222 222 55",
             "cepCliente": "31 777 333",
-            "biografiaCliente": "Oi me chamo João tenho 35 anos e amo fazer doações."
+            "biografiaCliente": bio
         }
     ]
     localStorage.setItem("dados", JSON.stringify(bancoDados));
@@ -33,7 +33,7 @@ function exibirContatos(filtroBusca) {
 
         // Criando o vetor com as informações do contato, para passar por meio do button editar,
         // caso a pessoa queira editar informações daquele contato
-        var dados = [index, contato.nomeCliente, contato.emailCliente, contato.cpfCliente, contato.cepCliente, contato.biografiaCliente];
+        var dados = index;
  
         if (filtroBusca == null) {
 
@@ -86,7 +86,7 @@ function exibirContatos(filtroBusca) {
                     var recipient = button.getAttribute('data-bs-whatever')
                    
                     // Passando a string retornada para um vetor de dados com id, nome e telefone
-                    var infos = recipient.split(",");
+                    
 
                     // Selecionando os elementos do modal que serão editados
                     const modalId = exampleModal.querySelector('#idIn')
@@ -97,12 +97,12 @@ function exibirContatos(filtroBusca) {
                     const modalBIO = exampleModal.querySelector('#biografia')
 
                     // Atribuindo no modal os valores retornados do button
-                    modalId.value = infos[0]
-                    modalNome.value = infos[1]
-                    modalEmail.value = infos[2]
-                    modalCPF.value = infos[3]
-                    modalCEP.value = infos[4]
-                    modalBIO.value = infos [5] + "," + infos[6] + "," + infos[7];
+                    modalId.value = recipient
+                    modalNome.value = bancoDados[recipient].nomeCliente
+                    modalEmail.value = bancoDados[recipient].emailCliente
+                    modalCPF.value = bancoDados[recipient].cpfCliente
+                    modalCEP.value = bancoDados[recipient].cepCliente
+                    modalBIO.value = bancoDados[recipient].biografiaCliente
                 })
             }
 
@@ -125,7 +125,7 @@ function editarContato() {
     var cep = document.getElementById("cep").value;
     var bio = document.getElementById("biografia").value;
 
-    if ((nome.length < 2) || (email.length < 12)) {
+    if ((nome.length < 2) || (email.length < 12) || (cpf.length < 11) || (cep.length < 8) || (bio.length < 15)) {
         if (nome.length < 2)
             alert("É necessário no mínimo duas letras no campo nome!");
 
@@ -138,7 +138,7 @@ function editarContato() {
         if (cep.length < 8)
         alert("O campo cep deve ter o seguinte formato: 31-123-321!");
 
-        if (bio.length < 30)
+        if (bio.length < 15)
         alert("O campo cep deve ter no mínimo 30 caracteres!");
 
     }
@@ -154,6 +154,7 @@ function editarContato() {
         alert("Informações editadas com sucesso!");
 
        $("#modal .close").click();
+       location.reload();
         
         exibirContatos();
     }
