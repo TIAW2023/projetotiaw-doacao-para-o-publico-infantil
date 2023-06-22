@@ -7,7 +7,6 @@ if (!bancoDados) {
             "nomeCliente": "João",
             "emailCliente": "joaoemaria@gmail.com",
             "cpfCliente": "222 222 222 55",
-            "cepCliente": "31 777 333",
             "biografiaCliente": bio
         }
     ]
@@ -23,21 +22,27 @@ function limparForm() {
     document.getElementById("biografia").value = "";
 }
 
+function quebrarLinha(texto, caracteresPorLinha) {
+    const regex = new RegExp(`.{1,${caracteresPorLinha}}`, 'g');
+    return texto.match(regex).join('\n');
+  }
 
 function exibirContatos(filtroBusca) {
     
     var strCard = "";
+    var id = json.parse(localStorage.getItem("logado"))
 
-    for (let index = 0; index < bancoDados.length; index++) {
-        const contato = bancoDados[index];
+        //passar a posição (0) para uma variavel para que puxe exatamente a posição da pessoa logada
+        const contato = bancoDados[id];
 
         // Criando o vetor com as informações do contato, para passar por meio do button editar,
         // caso a pessoa queira editar informações daquele contato
-        var dados = index;
- 
-        if (filtroBusca == null) {
+        var dados = id;
+        const observacoesQuebradas = quebrarLinha(contato.biografiaCliente, 50);
 
-            strCard += `
+        
+
+            strCard = `
                 <!--Imagem de perfil-->
                 <div class="row">
                     <div class="col-auto">
@@ -50,7 +55,6 @@ function exibirContatos(filtroBusca) {
                             <b id="nome">Nome:</b> ${contato.nomeCliente}<br>
                             <b id="email">E-mail:</b> ${contato.emailCliente}<br>
                             <b id="cpf">CPF/CNPJ:</b> ${contato.cpfCliente}<br>
-                            <b id="cep">CEP:</b> ${contato.cepCliente}
                         </h6>
                     </div>
                 </div>
@@ -60,7 +64,7 @@ function exibirContatos(filtroBusca) {
                             <b>Biografia</b>
                         </h6>
                         <p id="biografia">
-                            ${contato.biografiaCliente}
+                            ${observacoesQuebradas}
                         </p>
 
                         <p>
@@ -106,50 +110,47 @@ function exibirContatos(filtroBusca) {
                 })
             }
 
-
+            
+         // Escreve na tela os contatos presentes no LocalStorage
+         document.querySelector('#tela').innerHTML = strCard;
         }
 
+    
 
-    }
+   
 
-    // Escreve na tela os contatos presentes no LocalStorage
-    document.querySelector('#tela').innerHTML = strCard;
-}
 
 function editarContato() {
+     
+    var id = json.parse(localStorage.getItem("logado"))
 
-    var i = document.getElementById("idIn").value;
+    
     var nome = document.getElementById("nomeEdit").value;
     var email = document.getElementById("email").value;
     var cpf = document.getElementById("cpf-cnpj").value;
-    var cep = document.getElementById("cep").value;
     var bio = document.getElementById("biografia").value;
 
-    if ((nome.length < 2) || (email.length < 12) || (cpf.length < 11) || (cep.length < 8) || (bio.length < 15)) {
+    if ((nome.length < 2) || (email.length < 12) || (cpf.length < 14) ||  (bio.length < 15)) {
         if (nome.length < 2)
             alert("É necessário no mínimo duas letras no campo nome!");
 
         if (email.length < 12)
             alert("O campo email deve ter o seguinte formato: soueu@hotmail.com.br!");
         
-        if (cpf.length < 11)
+        if (cpf.length < 14)
         alert("O campo cpf deve ter o seguinte formato:  224.333.545-21!");
-
-        if (cep.length < 8)
-        alert("O campo cep deve ter o seguinte formato: 31-123-321!");
 
         if (bio.length < 15)
         alert("O campo cep deve ter no mínimo 30 caracteres!");
 
     }
     else {
-        bancoDados[i].nomeCliente = nome;
-        bancoDados[i].emailCliente = email;
-        bancoDados[i].cpfCliente = cpf;
-        bancoDados[i].cepCliente = cep;
-        bancoDados[i].biografiaCliente = bio;
+        bancoDados[id].nomeCliente = nome;
+        bancoDados[id].emailCliente = email;
+        bancoDados[id].cpfCliente = cpf;
+        bancoDados[id].biografiaCliente = bio;
 
-        localStorage.setItem("dados", JSON.stringify(bancoDados));
+        localStorage.setItem("users", JSON.stringify(bancoDados));
 
         alert("Informações editadas com sucesso!");
 
