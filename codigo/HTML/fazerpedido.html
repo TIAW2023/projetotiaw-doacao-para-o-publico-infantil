@@ -51,8 +51,10 @@
                     <div class="col-auto col-md-12 mt-3">
                         <p>Digite seu nome se for pessoa fisica, nome da empresa se pessoa juridica: </p>
                         <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" placeholder="Digite seu Nome" pattern=".{4,}"
-                            title="O nome deve ter no mínimo 4 caracteres" required><br>
+                        <input type="text" id="nome" placeholder="Digite seu nome">
+                        <button type="button" onclick="validarNome()">Salvar</button>
+                        <p id="mensagemErro" style="color: red; display: none;"></p>
+                        <br>               
                         <br>
 
                         <label for="cep">CEP:</label>
@@ -68,7 +70,7 @@
 
                     <div class="col-md-4"><input type="text" id="rua" name="opcao" disabled placeholder="Rua..."> </div>
 
-                    <div class="col-md-4"><input type="text" id="numero" name="opcao" placeholder="Numero..."></div>
+                    <div class="col-md-4"><input type="number" id="numero" name="opcao" placeholder="Numero..."></div>
 
                     <div class="col-md-4"><input type="text" id="bairro" name="opcao" disabled placeholder="Bairro...">
                     </div>
@@ -80,30 +82,6 @@
                     <div class="col-md-4"><input type="text" id="estado" name="opcao" disabled placeholder="Estado ...">
                     </div>
                 </div>
-                <script>
-
-                    function buscarEndereco() {
-                        const cep = document.getElementById('cep').value;
-                        const url = `https://viacep.com.br/ws/${cep}/json/`;
-
-                        fetch(url)
-                            .then(response => response.json())
-                            .then(data => {
-                                document.getElementById('rua').value = data.logradouro;
-                                document.getElementById('bairro').value = data.bairro;
-                                document.getElementById('cidade').value = data.localidade;
-                                document.getElementById('estado').value = data.uf;
-                            })
-                            .catch(error => console.log(error));
-                    }
-
-                    function limparEndereco() {
-                        document.getElementById('rua').value = '';
-                        document.getElementById('bairro').value = '';
-                        document.getElementById('cidade').value = '';
-                        document.getElementById('estado').value = '';
-                    }
-                </script>
 
 
                 <br>
@@ -111,7 +89,7 @@
                     <div class="card-body">
                         <div class="col">
                             <p>Digite sobre o que se trata :</p>
-                            <textarea id="observacoes" class="d-block w-100"></textarea>
+                            <textarea style="resize: none;" id="observacoes" class="d-block w-100"></textarea>
                         </div>
                     </div>
 
