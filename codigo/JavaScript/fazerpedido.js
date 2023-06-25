@@ -28,7 +28,7 @@ function salvarPessoa() {
     opcoes.length == 0
   ) {
     // Exibir o alerta de campo faltante
-    alert("Por favor, preencha todos os campos obrigatórios!");
+    alert("Por favor, preencha todos os campos!");
     return; // Parar a execução da função
   }
   // Criar um objeto com os dados da pessoa
@@ -68,4 +68,41 @@ function salvarPessoa() {
     checkbox.checked = false;
   });
   alert("Pedido realizado! Os dados foram salvos.");
+}
+
+function validarNome() {
+  var nomeInput = document.getElementById("nome");
+  var mensagemErro = document.getElementById("mensagemErro");
+
+  if (nomeInput.value.length < 3) {
+    mensagemErro.textContent = "O nome deve conter pelo menos 3 caracteres.";
+    mensagemErro.style.display = "block";
+  } else {
+    mensagemErro.style.display = "none";
+    // Aqui você pode prosseguir com o envio do formulário ou realizar outras ações
+  }
+}
+
+// Função CEP
+
+function buscarEndereco() {
+  const cep = document.getElementById("cep").value;
+  const url = `https://viacep.com.br/ws/${cep}/json/`;
+
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      document.getElementById("rua").value = data.logradouro;
+      document.getElementById("bairro").value = data.bairro;
+      document.getElementById("cidade").value = data.localidade;
+      document.getElementById("estado").value = data.uf;
+    })
+    .catch((error) => console.log(error));
+}
+
+function limparEndereco() {
+  document.getElementById("rua").value = "";
+  document.getElementById("bairro").value = "";
+  document.getElementById("cidade").value = "";
+  document.getElementById("estado").value = "";
 }
