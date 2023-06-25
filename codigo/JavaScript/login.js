@@ -25,11 +25,7 @@ let efetuarLogin = (email, password) => {
   for (let i = 0; i < users.length; i++) {
     if (users[i].email === email) {
       usuario = users[i];
-
-     // Armazenar os ids em cada posição no logado
-      localStorage.setItem("logado", JSON.stringify(i));
       break;
-      
     }
   }
 
