@@ -20,7 +20,7 @@ function cadastrarUsuario(email, fullName, password) {
   };
 
   // Adicionar o novo usuário à lista de usuários
-  users.unshift(newUser);
+  users.push(newUser);
 
   // Salvar a lista atualizada no LocalStorage
   localStorage.setItem("users", JSON.stringify(users));
