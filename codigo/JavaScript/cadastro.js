@@ -7,7 +7,7 @@ function cadastrarUsuario(email, fullName, password) {
   });
 
   if (userExists) {
-    alert("Email já cadastrado. Por favor, insira um email diferente.");
+    alert("Email já cadastrado. Por favor, insira um email diferente...");
     return;
   }
 
