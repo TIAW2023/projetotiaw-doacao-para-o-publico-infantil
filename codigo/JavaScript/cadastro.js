@@ -1,5 +1,4 @@
 function cadastrarUsuario(email, fullName, password) {
-
   var usersJSON = localStorage.getItem("users");
   var users = usersJSON ? JSON.parse(usersJSON) : [];
 
@@ -26,7 +25,7 @@ function cadastrarUsuario(email, fullName, password) {
   // Salvar a lista atualizada no LocalStorage
   localStorage.setItem("users", JSON.stringify(users));
 
-  console.log("Usuário cadastrado com sucesso!");
+  console.log("Cadastro realizado com sucesso!");
 }
 
 document.getElementById("signup-form").addEventListener("submit", function(event) {
@@ -36,6 +35,12 @@ document.getElementById("signup-form").addEventListener("submit", function(event
   var fullName = document.getElementById("fullName").value;
   var password = document.getElementById("password").value;
   var confirmPassword = document.getElementById("confirm-password").value;
+
+  // Verificar se todos os campos foram preenchidos
+  if (!email || !fullName || !password || !confirmPassword) {
+    alert("Por favor, preencha todos os campos disponíveis.");
+    return;
+  }
 
   // Verificar se as senhas são iguais
   if (password !== confirmPassword) {
@@ -51,4 +56,6 @@ document.getElementById("signup-form").addEventListener("submit", function(event
   document.getElementById("fullName").value = "";
   document.getElementById("password").value = "";
   document.getElementById("confirm-password").value = "";
+
+  alert("Cadastro realizado com sucesso!");
 });
