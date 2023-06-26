@@ -21,6 +21,7 @@ let efetuarLogin = (email, password) => {
   if (usuario && usuario.password && usuario.password === password) {
     localStorage.setItem("logado", JSON.stringify(usuarioIndex));
     alert("Login realizado com sucesso!");
+    window.location.href = "home.html";
   } else {
     alert("Email ou senha incorretos. Por favor, tente novamente.");
   }
