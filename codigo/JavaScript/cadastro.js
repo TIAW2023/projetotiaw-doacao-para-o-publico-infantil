@@ -10,7 +10,7 @@ function cadastrarUsuario(email, fullName, password) {
     alert("Email já cadastrado. Por favor, insira um email diferente...");
     return;
   }
-
+  else{
   // Criar um novo usuário
   var newUser = {
     email: email,
@@ -25,8 +25,9 @@ function cadastrarUsuario(email, fullName, password) {
 
   // Salvar a lista atualizada no LocalStorage
   localStorage.setItem("users", JSON.stringify(users));
-
+  window.location.href = "login.html";
   console.log("Cadastro realizado com sucesso!");
+ }
 }
 
 document.getElementById("signup-form").addEventListener("submit", function(event) {
