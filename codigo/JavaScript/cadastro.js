@@ -16,7 +16,8 @@ function cadastrarUsuario(email, fullName, password) {
     email: email,
     fullName: fullName,
     password: password,
-    cpf: null
+    cpf: "000.000.000-00",
+    bio: "Digite sua biografia aqui.",
   };
 
   // Adicionar o novo usuário à lista de usuários
