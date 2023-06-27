@@ -1,49 +1,6 @@
-// Verificar se já existem usuários no localStorage
-let usersJSON = localStorage.getItem("users");
-let users = usersJSON ? JSON.parse(usersJSON) : [];
-
-console.log("Quantidade de usuários:", users.length);
-
-let efetuarLogin = (email, password) => {
-  let usersJSON = localStorage.getItem("users");
-  let users = usersJSON ? JSON.parse(usersJSON) : [];
-
-  let usuario = null;
-  let usuarioIndex = -1;
-  for (let i = 0; i < users.length; i++) {
-    if (users[i].email === email) {
-      usuario = users[i];
-      usuarioIndex = i;
-      break;
-    }
-  }
-
-  if (usuario && usuario.password && usuario.password === password) {
-    localStorage.setItem("logado", JSON.stringify(usuarioIndex));
-    alert("Login realizado com sucesso!");
-    window.location.href = "home.html";
-  } else {
-    alert("Email ou senha incorretos. Por favor, tente novamente.");
-  }
-};
-
-document.getElementById("login-form").addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  let email = document.getElementById("email").value;
-  let senha = document.getElementById("password").value;
-
-  efetuarLogin(email, senha);
-
-  document.getElementById("email").value = "";
-  document.getElementById("password").value = "";
-});
-
-// Função para salvar os dados de uma pessoa no Local Storage
 function salvarPessoa() {
-  // Obter os valores dos campos de entrada
   var nome = document.getElementById("nome").value;
-  var cep = document.getElementById("cep").value;
+  var cep = document.getElementById("cep").value.replace(/\D/g, ""); // Remover caracteres não numéricos do CEP
   var rua = document.getElementById("rua").value;
   var numero = document.getElementById("numero").value;
   var bairro = document.getElementById("bairro").value;
@@ -57,38 +14,21 @@ function salvarPessoa() {
     opcoes.push(checkbox.value);
   });
 
-  // Verificar se todos os campos obrigatórios foram preenchidos
   if (
-    !nome ||
     !cep ||
     !rua ||
     !numero ||
     !bairro ||
     !cidade ||
     !estado ||
-    opcoes.length == 0
+    opcoes.length == 0 ||
+    nome.length < 3
   ) {
-    // Exibir o alerta de campo faltante
-    alert("Por favor, preencha todos os campos!");
-    return; // Parar a execução da função
-  }
-
-  // Verificar se o usuário está logado
-  var usuarioIndex = JSON.parse(localStorage.getItem("logado"));
-  if (usuarioIndex === null) {
-    alert("Nenhum usuário logado. Faça o login para prosseguir.");
+    alert("Por favor, preencha todos os campos!, Nome minimo 3 caracteres !!!");
     return;
   }
 
-  // Verificar se já existem informações de pessoas no Local Storage
-  var pessoas = JSON.parse(localStorage.getItem("pessoas")) || [];
-
-  // Obter os dados da pessoa logada do localStorage
-  var usuarioJSON = localStorage.getItem("users");
-  var users = usuarioJSON ? JSON.parse(usuarioJSON) : [];
-  var pessoaLogada = users[usuarioIndex];
-
-  // Criar um objeto com os dados da pessoa
+  var id = localStorage.getItem("logado");
   var pessoa = {
     nome: nome,
     endereco: {
@@ -101,17 +41,13 @@ function salvarPessoa() {
     },
     observacoes: observacoes,
     opcoes: opcoes,
-    logado: true,
-    pessoaLogada: pessoaLogada, // Adicionando os dados da pessoa logada
+    id: id,
   };
 
-  // Adicionar os dados da pessoa ao array
+  var pessoas = JSON.parse(localStorage.getItem("pessoas")) || [];
   pessoas.push(pessoa);
-
-  // Salvar o array atualizado no Local Storage
   localStorage.setItem("pessoas", JSON.stringify(pessoas));
 
-  // Limpar os campos de entrada
   document.getElementById("nome").value = "";
   document.getElementById("cep").value = "";
   document.getElementById("rua").value = "";
@@ -123,44 +59,30 @@ function salvarPessoa() {
   checkboxes.forEach(function (checkbox) {
     checkbox.checked = false;
   });
-
-  // Exibir a mensagem de confirmação
   alert("Pedido realizado! Os dados foram salvos.");
 }
 
-function validarNome() {
-  var nomeInput = document.getElementById("nome");
-  var mensagemErro = document.getElementById("mensagemErro");
-
-  if (nomeInput.value.length < 3) {
-    mensagemErro.textContent = "O nome deve conter pelo menos 3 caracteres.";
-    mensagemErro.style.display = "block";
-  } else {
-    mensagemErro.style.display = "none";
-    // Aqui você pode prosseguir com o envio do formulário ou realizar outras ações
+function autoPreencherEndereco() {
+  var cep = document.getElementById("cep").value.replace(/\D/g, "");
+  if (cep.length === 8) {
+    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+      .then((response) => response.json())
+      .then((data) => {
+        if (!data.erro) {
+          document.getElementById("rua").value = data.logradouro;
+          document.getElementById("bairro").value = data.bairro;
+          document.getElementById("cidade").value = data.localidade;
+          document.getElementById("estado").value = data.uf;
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 }
 
-// Função CEP
+document.getElementById("cep").addEventListener("input", function () {
+  this.value = this.value.replace(/\D/g, "");
+});
 
-function buscarEndereco() {
-  const cep = document.getElementById("cep").value;
-  const url = `https://viacep.com.br/ws/${cep}/json/`;
-
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      document.getElementById("rua").value = data.logradouro;
-      document.getElementById("bairro").value = data.bairro;
-      document.getElementById("cidade").value = data.localidade;
-      document.getElementById("estado").value = data.uf;
-    })
-    .catch((error) => console.log(error));
-}
-
-function limparEndereco() {
-  document.getElementById("rua").value = "";
-  document.getElementById("bairro").value = "";
-  document.getElementById("cidade").value = "";
-  document.getElementById("estado").value = "";
-}
+document.getElementById("cep").addEventListener("input", autoPreencherEndereco);
