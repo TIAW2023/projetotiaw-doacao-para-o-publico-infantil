@@ -1,5 +1,54 @@
-// Função para salvar os dados de uma pessoa no Local Storage
+// Verificar se já existem usuários no localStorage
+let usersJSON = localStorage.getItem("users");
+let users = usersJSON ? JSON.parse(usersJSON) : [];
+
+console.log("Quantidade de usuários:", users.length);
+
+let efetuarLogin = (email, password) => {
+  let usersJSON = localStorage.getItem("users");
+  let users = usersJSON ? JSON.parse(usersJSON) : [];
+
+  let usuario = null;
+  let usuarioIndex = -1;
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].email === email) {
+      usuario = users[i];
+      usuarioIndex = i;
+      break;
+    }
+  }
+
+  if (usuario && usuario.password && usuario.password === password) {
+    localStorage.setItem("logado", JSON.stringify(usuarioIndex));
+    alert("Login realizado com sucesso!");
+    window.location.href = "home.html";
+  } else {
+    alert("Email ou senha incorretos. Por favor, tente novamente.");
+  }
+};
+
+document.getElementById("login-form").addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  let email = document.getElementById("email").value;
+  let senha = document.getElementById("password").value;
+
+  efetuarLogin(email, senha);
+
+  document.getElementById("email").value = "";
+  document.getElementById("password").value = "";
+});
+
 function salvarPessoa() {
+  // Obter o índice do usuário logado
+  var usuarioIndex = JSON.parse(localStorage.getItem("logado"));
+
+  // Verificar se o usuário está logado
+  if (isNaN(usuarioIndex) || usuarioIndex < 0 || usuarioIndex >= users.length) {
+    alert("É necessário fazer o login antes de salvar os dados.");
+    return;
+  }
+
   // Obter os valores dos campos de entrada
   var nome = document.getElementById("nome").value;
   var cep = document.getElementById("cep").value;
@@ -16,23 +65,9 @@ function salvarPessoa() {
     opcoes.push(checkbox.value);
   });
 
-  // Verificar se todos os campos obrigatórios foram preenchidos
-  if (
-    !nome ||
-    !cep ||
-    !rua ||
-    !numero ||
-    !bairro ||
-    !cidade ||
-    !estado ||
-    opcoes.length == 0
-  ) {
-    // Exibir o alerta de campo faltante
-    alert("Por favor, preencha todos os campos!");
-    return; // Parar a execução da função
-  }
   // Criar um objeto com os dados da pessoa
   var pessoa = {
+    userId: users[usuarioIndex].id,
     nome: nome,
     endereco: {
       cep: cep,
@@ -108,44 +143,3 @@ function limparEndereco() {
   document.getElementById("cidade").value = "";
   document.getElementById("estado").value = "";
 }
-
-// Verificar se já existem usuários no localStorage
-let usersJSON = localStorage.getItem("users");
-let users = usersJSON ? JSON.parse(usersJSON) : [];
-
-console.log("Quantidade de usuários:", users.length);
-
-let efetuarLogin = (email, password) => {
-  let usersJSON = localStorage.getItem("users");
-  let users = usersJSON ? JSON.parse(usersJSON) : [];
-
-  let usuario = null;
-  let usuarioIndex = -1;
-  for (let i = 0; i < users.length; i++) {
-    if (users[i].email === email) {
-      usuario = users[i];
-      usuarioIndex = i;
-      break;
-    }
-  }
-
-  if (usuario && usuario.password && usuario.password === password) {
-    localStorage.setItem("logado", JSON.stringify(usuarioIndex));
-    alert("Login realizado com sucesso!");
-    window.location.href = "home.html";
-  } else {
-    alert("Email ou senha incorretos. Por favor, tente novamente.");
-  }
-};
-
-document.getElementById("login-form").addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  let email = document.getElementById("email").value;
-  let senha = document.getElementById("password").value;
-
-  efetuarLogin(email, senha);
-
-  document.getElementById("email").value = "";
-  document.getElementById("password").value = "";
-});
