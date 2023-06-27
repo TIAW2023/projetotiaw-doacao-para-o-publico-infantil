@@ -4,6 +4,7 @@ let users = usersJSON ? JSON.parse(usersJSON) : [];
 
 console.log("Quantidade de usuários:", users.length);
 
+// Função para realizar o login
 let efetuarLogin = (email, password) => {
   let usersJSON = localStorage.getItem("users");
   let users = usersJSON ? JSON.parse(usersJSON) : [];
@@ -18,16 +19,20 @@ let efetuarLogin = (email, password) => {
     }
   }
 
+  // Verificar se o usuário foi encontrado e a senha está correta
   if (usuario && usuario.password && usuario.password === password) {
+    // Armazenar o índice do usuário logado no localStorage
     localStorage.setItem("logado", JSON.stringify(usuarioIndex));
     alert("Login realizado com sucesso!");
-    window.location.href = "home.html";
+    window.location.href = "home.html"; // Redirecionar para a página de home após o login
   } else {
     alert("Email ou senha incorretos. Por favor, tente novamente.");
   }
 };
 
+// Função para salvar os dados da pessoa logada
 let salvarPessoa = () => {
+  // Obter o índice do usuário logado no localStorage
   let logadoJSON = localStorage.getItem("logado");
   let logadoIndex = logadoJSON ? JSON.parse(logadoJSON) : -1;
 
@@ -35,8 +40,9 @@ let salvarPessoa = () => {
     let usersJSON = localStorage.getItem("users");
     let users = usersJSON ? JSON.parse(usersJSON) : [];
 
-    let logado = users[logadoIndex];
+    let logado = users[logadoIndex]; // Obter o usuário logado
 
+    // Obter os valores dos campos de entrada
     let nome = document.getElementById("nome").value;
     let cep = document.getElementById("cep").value;
     let rua = document.getElementById("rua").value;
@@ -52,6 +58,7 @@ let salvarPessoa = () => {
       opcoes.push(checkbox.value);
     });
 
+    // Verificar se todos os campos obrigatórios foram preenchidos
     if (
       !nome ||
       !cep ||
@@ -66,6 +73,7 @@ let salvarPessoa = () => {
       return;
     }
 
+    // Criar um objeto com os dados da pessoa
     let pessoa = {
       nome: nome,
       endereco: {
@@ -81,13 +89,14 @@ let salvarPessoa = () => {
     };
 
     if (!logado.pessoas) {
-      logado.pessoas = [];
+      logado.pessoas = []; // Inicializar o array de pessoas se não existir
     }
 
-    logado.pessoas.push(pessoa);
+    logado.pessoas.push(pessoa); // Adicionar os dados da pessoa ao array do usuário logado
 
-    localStorage.setItem("users", JSON.stringify(users));
+    localStorage.setItem("users", JSON.stringify(users)); // Atualizar os usuários no localStorage
 
+    // Limpar os campos de entrada
     document.getElementById("nome").value = "";
     document.getElementById("cep").value = "";
     document.getElementById("rua").value = "";
@@ -102,10 +111,26 @@ let salvarPessoa = () => {
 
     alert("Pedido realizado! Os dados foram salvos.");
   } else {
-    alert("Faça o login para salvar os dados.");
+    alert(
+      "Nenhum usuário logado. Por favor, faça o login antes de salvar os dados."
+    );
   }
 };
 
+// Event listener para o formulário de login
+document.getElementById("login-form").addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  let email = document.getElementById("email").value;
+  let senha = document.getElementById("password").value;
+
+  efetuarLogin(email, senha);
+
+  document.getElementById("email").value = "";
+  document.getElementById("password").value = "";
+});
+
+// Event listener para o formulário de salvar dados da pessoa logada
 document.getElementById("salvar-form").addEventListener("submit", (event) => {
   event.preventDefault();
   salvarPessoa();
