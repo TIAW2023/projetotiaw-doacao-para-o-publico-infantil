@@ -55,10 +55,10 @@
                         <button type="button" onclick="validarNome()">Salvar</button>
                         <p id="mensagemErro" style="color: red; display: none;"></p>
                         <br>               
-                        <br>
+                        
 
                         <label for="cep">CEP:</label>
-                        <input type="text" id="cep" name="cep" maxlength="9" onblur="buscarEndereco()"
+                        <input type="number" id="cep" name="cep" maxlength="9" onblur="buscarEndereco()"
                             oninput="limparEndereco()" placeholder="Digite seu Cep">
                         <button class="btn-cep" conclick="buscarEndereco()">Buscar</button>
 
