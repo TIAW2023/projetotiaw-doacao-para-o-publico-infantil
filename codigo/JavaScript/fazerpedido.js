@@ -32,13 +32,6 @@ function salvarPessoa() {
     return; // Parar a execução da função
   }
 
-  // Verificar se o usuário está logado
-  var usuarioIndex = JSON.parse(localStorage.getItem("logado"));
-  if (usuarioIndex === null) {
-    alert("Nenhum usuário logado. Faça o login para prosseguir.");
-    return;
-  }
-
   // Verificar se já existem informações de pessoas no Local Storage
   var pessoas = JSON.parse(localStorage.getItem("pessoas")) || [];
 
@@ -62,6 +55,9 @@ function salvarPessoa() {
 
   // Salvar o array atualizado no Local Storage
   localStorage.setItem("pessoas", JSON.stringify(pessoas));
+
+  // Adicionar a pessoa logada ao Local Storage
+  localStorage.setItem("pessoaLogada", JSON.stringify(pessoa));
 
   // Limpar os campos de entrada
   document.getElementById("nome").value = "";
@@ -94,7 +90,6 @@ function validarNome() {
 }
 
 // Função CEP
-
 function buscarEndereco() {
   const cep = document.getElementById("cep").value;
   const url = `https://viacep.com.br/ws/${cep}/json/`;
@@ -110,9 +105,10 @@ function buscarEndereco() {
     .catch((error) => console.log(error));
 }
 
-function limparEndereco() {
-  document.getElementById("rua").value = "";
-  document.getElementById("bairro").value = "";
-  document.getElementById("cidade").value = "";
-  document.getElementById("estado").value = "";
-}
+// Event listener para o botão de buscar endereço
+document
+  .getElementById("buscar-endereco")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    buscarEndereco();
+  });
