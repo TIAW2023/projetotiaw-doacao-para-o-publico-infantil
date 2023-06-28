@@ -74,7 +74,7 @@ meios de doação, como:
 - Creches. 
 - Entre outros espaços. 
 
-Por meio da ultilização do nosso site, facilitando assim, a comunicação entre os doadores e os que precisam de doações com a principal finalidade de ajudar uma criança carente.
+Por meio da utilização do nosso site, facilitando assim, a comunicação entre os doadores e os que precisam de doações com a principal finalidade de ajudar uma criança carente.
 
 ## Justificativa
 "No brasil, ao menos 32 milhões de meninos e meninas (63% do total) vivem na
