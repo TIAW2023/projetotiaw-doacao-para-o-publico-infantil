@@ -6,7 +6,7 @@ Nosso objetivo é fazer a ligação de pessoas que querem doar com os meios de d
 - Creches.
 - Entre outros espaços.
 
-Por meio da ultilização do nosso site, facilitando assim, a comunicação entre os doadores e os que precisam de doações com a principal finalidade de ajudar uma criança carente.
+Por meio da utilização do nosso site, facilitando assim, a comunicação entre os doadores e os que precisam de doações com a principal finalidade de ajudar uma criança carente.
 
 ## Alunos integrantes da equipe
 
